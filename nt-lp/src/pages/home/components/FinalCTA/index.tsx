@@ -16,7 +16,7 @@ export default function FinalCTA() {
   return (
     <section id="contato" className="relative overflow-hidden">
       {/* Main CTA Section */}
-      <div className="py-24 bg-gradient-to-br from-[#0F4C47] via-[#115E59] to-[#0D9488] relative">
+      <div className="py-24 bg-gradient-to-br from-[#0f416d] via-[#0c5a9e] to-[#1e88e5] relative">
         {/* Background elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#F97316]/20 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-[100px]"></div>
@@ -66,7 +66,7 @@ export default function FinalCTA() {
               </div>
 
               <div className="text-center pt-4">
-                <h3 className="text-2xl md:text-3xl font-black text-[#115E59] mb-4">
+                <h3 className="text-2xl md:text-3xl font-black text-primary mb-4">
                   Aula Experimental Grátis
                 </h3>
                 <p className="text-gray-600 mb-8">
@@ -81,7 +81,7 @@ export default function FinalCTA() {
                     { icon: 'ri-shield-check-line', text: 'Sem compromisso' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-2 p-3 rounded-xl bg-gray-50">
-                      <i className={`${item.icon} text-[#0D9488]`}></i>
+                      <i className={`${item.icon} text-[#1e88e5]`}></i>
                       <span className="text-sm text-gray-700">{item.text}</span>
                     </div>
                   ))}
@@ -89,10 +89,10 @@ export default function FinalCTA() {
 
                 <button
                   onClick={handleWhatsApp}
-                  className="w-full bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white py-5 rounded-2xl font-bold text-lg hover:from-[#EA580C] hover:to-[#F97316] transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-3 shadow-lg shadow-[#F97316]/30 hover:shadow-[#F97316]/50 hover:scale-[1.02]"
+                  className="w-full bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white py-5 px-5 rounded-4xl font-bold text-lg hover:from-[#EA580C] hover:to-[#F97316] transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-2 shadow-lg shadow-[#F97316]/30 hover:shadow-[#F97316]/50 hover:scale-[1.02]"
                 >
                   <i className="ri-whatsapp-line text-2xl"></i>
-                  AGENDAR MINHA AULA GRÁTIS
+                  <p className="text-wrap">AGENDAR MINHA AULA GRÁTIS</p>
                 </button>
 
                 <p className="text-xs text-gray-500 mt-4 flex items-center justify-center gap-2">
@@ -106,13 +106,13 @@ export default function FinalCTA() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-[#0A3D38] py-16">
+      <footer className="bg-[#0a4a7a] py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             {/* Logo & Slogan */}
             <div className="md:col-span-2">
               <img 
-                src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/2cb8f885ff40b786704879ba0132079f.png" 
+                src="public/img/natural-talking-w.png" 
                 alt="Natural Talking English" 
                 className="h-12 w-auto object-contain mb-4"
               />
@@ -130,11 +130,7 @@ export default function FinalCTA() {
               <div className="space-y-3">
                 <a href="https://wa.me/5585985167789" className="flex items-center gap-3 text-white/70 hover:text-[#F97316] transition-colors cursor-pointer">
                   <i className="ri-whatsapp-line"></i>
-                  <span className="text-sm">(85) 98669-1884</span>
-                </a>
-                <a href="https://wa.me/5585997988007" className="flex items-center gap-3 text-white/70 hover:text-[#F97316] transition-colors cursor-pointer">
-                  <i className="ri-whatsapp-line"></i>
-                  <span className="text-sm">(85) 99798-8007</span>
+                  <span className="text-sm">(85) 98516-7789</span>
                 </a>
                 <a href="mailto:naturaltalkingenglish@gmail.com" className="flex items-center gap-3 text-white/70 hover:text-[#F97316] transition-colors cursor-pointer">
                   <i className="ri-mail-line"></i>
@@ -146,9 +142,15 @@ export default function FinalCTA() {
             {/* Location */}
             <div>
               <h4 className="text-white font-bold mb-4">Localização</h4>
-              <div className="flex items-start gap-3 text-white/70">
-                <i className="ri-map-pin-line mt-0.5"></i>
-                <span className="text-sm">Itaitinga/CE<br />Brasil</span>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-white/70">
+                  <i className="ri-map-pin-line mt-0.5"></i>
+                  <span className="text-sm">Itaitinga/CE - Brasil</span>
+                </div>
+                <div className="flex items-center gap-3 text-white/70">
+                  <i className="ri-computer-line mt-0.5"></i>
+                  <span className="text-sm">Remoto - 100% Online</span>
+                </div>
               </div>
             </div>
           </div>

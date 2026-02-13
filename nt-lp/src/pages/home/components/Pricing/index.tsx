@@ -107,10 +107,10 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#115E59]/10 text-[#115E59] text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             INVESTIMENTO
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#115E59] mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6 leading-tight">
             Escolha Seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FBBF24]">Plano de Fluência</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
@@ -123,8 +123,8 @@ export default function Pricing() {
               onClick={() => setIsGroup(false)}
               className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer whitespace-nowrap ${
                 !isGroup 
-                  ? 'bg-[#115E59] text-white shadow-lg' 
-                  : 'text-gray-600 hover:text-[#115E59]'
+                  ? 'bg-primary text-white shadow-lg' 
+                  : 'text-gray-600 hover:text-primary'
               }`}
             >
               Individual
@@ -133,8 +133,8 @@ export default function Pricing() {
               onClick={() => setIsGroup(true)}
               className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer whitespace-nowrap ${
                 isGroup 
-                  ? 'bg-[#115E59] text-white shadow-lg' 
-                  : 'text-gray-600 hover:text-[#115E59]'
+                  ? 'bg-primary text-white shadow-lg' 
+                  : 'text-gray-600 hover:text-primary'
               }`}
             >
               Dupla / Grupo
@@ -149,8 +149,8 @@ export default function Pricing() {
               key={index} 
               className={`relative rounded-3xl p-8 transition-all duration-300 ${
                 plan.recommended 
-                  ? 'bg-gradient-to-br from-[#115E59] to-[#0D9488] text-white shadow-2xl shadow-[#115E59]/30 scale-105 z-10' 
-                  : 'bg-white border border-gray-100 hover:border-[#0D9488]/30 hover:shadow-xl'
+                  ? 'bg-gradient-to-br from-[#0c5a9e] to-[#1e88e5] text-white shadow-2xl shadow-[#0c5a9e]/30 scale-105 z-10' 
+                  : 'bg-white border border-gray-100 hover:border-[#1e88e5]/30 hover:shadow-xl'
               }`}
             >
               {plan.recommended && (
@@ -162,14 +162,14 @@ export default function Pricing() {
               )}
               
               <div className="text-center mb-8">
-                <h3 className={`text-2xl font-bold mb-2 ${plan.recommended ? 'text-white' : 'text-[#115E59]'}`}>
+                <h3 className={`text-2xl font-bold mb-2 ${plan.recommended ? 'text-white' : 'text-primary'}`}>
                   {plan.name}
                 </h3>
                 <p className={`text-sm mb-6 ${plan.recommended ? 'text-white/70' : 'text-gray-500'}`}>
                   {plan.frequency}
                 </p>
                 <div className="flex items-end justify-center gap-1">
-                  <span className={`text-5xl font-black ${plan.recommended ? 'text-white' : 'text-[#115E59]'}`}>
+                  <span className={`text-5xl font-black ${plan.recommended ? 'text-white' : 'text-primary'}`}>
                     {plan.price}
                   </span>
                   <span className={`text-sm mb-2 ${plan.recommended ? 'text-white/70' : 'text-gray-500'}`}>
@@ -182,9 +182,9 @@ export default function Pricing() {
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className={`w-5 h-5 flex items-center justify-center flex-shrink-0 rounded-full ${
-                      plan.recommended ? 'bg-[#F97316]' : 'bg-[#0D9488]/10'
+                      plan.recommended ? 'bg-[#F97316]' : 'bg-[#1e88e5]/10'
                     }`}>
-                      <i className={`ri-check-line text-sm ${plan.recommended ? 'text-white' : 'text-[#0D9488]'}`}></i>
+                      <i className={`ri-check-line text-sm ${plan.recommended ? 'text-white' : 'text-[#1e88e5]'}`}></i>
                     </div>
                     <span className={`text-sm ${plan.recommended ? 'text-white/90' : 'text-gray-600'}`}>
                       {feature}
@@ -198,7 +198,7 @@ export default function Pricing() {
                 className={`w-full py-4 rounded-2xl font-bold transition-all cursor-pointer whitespace-nowrap ${
                   plan.recommended
                     ? 'bg-[#F97316] text-white hover:bg-[#EA580C] shadow-lg shadow-[#F97316]/30'
-                    : 'bg-[#115E59] text-white hover:bg-[#0D9488]'
+                    : 'bg-primary text-white hover:bg-[#1e88e5]'
                 }`}
               >
                 Começar Agora
@@ -210,19 +210,19 @@ export default function Pricing() {
         {/* Guarantee */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <i className="ri-book-open-line text-[#0D9488]"></i>
+            <i className="ri-book-open-line text-[#1e88e5]"></i>
             <span>Material incluído</span>
           </div>
           <div className="flex items-center gap-2">
-            <i className="ri-whatsapp-line text-[#0D9488]"></i>
+            <i className="ri-whatsapp-line text-[#1e88e5]"></i>
             <span>Suporte WhatsApp</span>
           </div>
           <div className="flex items-center gap-2">
-            <i className="ri-calendar-check-line text-[#0D9488]"></i>
+            <i className="ri-calendar-check-line text-[#1e88e5]"></i>
             <span>Reagendamento flexível</span>
           </div>
           <div className="flex items-center gap-2">
-            <i className="ri-shield-check-line text-[#0D9488]"></i>
+            <i className="ri-shield-check-line text-[#1e88e5]"></i>
             <span>Satisfação garantida</span>
           </div>
         </div>

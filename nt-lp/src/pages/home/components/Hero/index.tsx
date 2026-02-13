@@ -22,11 +22,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background com gradiente e elementos decorativos */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F4C47] via-[#115E59] to-[#0D9488]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f416d] via-[#0c5a9e] to-[#1e88e5]"></div>
         
         {/* Glassmorphism orbs */}
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#F97316]/20 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#0D9488]/30 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#1e88e5]/30 rounded-full blur-[100px]"></div>
         
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -58,7 +58,7 @@ export default function Hero() {
             onClick={handleCTA}
             className="group bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white px-10 py-5 rounded-2xl text-lg md:text-xl font-bold hover:from-[#EA580C] hover:to-[#F97316] transition-all cursor-pointer whitespace-nowrap shadow-2xl shadow-[#F97316]/40 hover:shadow-[#F97316]/60 hover:scale-105 flex items-center gap-3"
           >
-            QUERO MINHA AULA EXPERIMENTAL GRÁTIS
+            <p className="text-wrap">QUERO MINHA AULA EXPERIMENTAL GRÁTIS</p>
             <i className="ri-arrow-right-line text-2xl group-hover:translate-x-1 transition-transform"></i>
           </button>
           

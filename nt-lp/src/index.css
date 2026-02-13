@@ -11,6 +11,10 @@
 }
 
 .text-primary {
-  color: red;
-  /* #115E59 */
+  color: #0c5a9e;
+  /* color: #ff7c38; */
+}
+
+.bg-primary {
+  background-color: #0c5a9e;
 }

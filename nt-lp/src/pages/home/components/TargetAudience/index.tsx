@@ -18,7 +18,7 @@ export default function TargetAudience() {
   return (
     <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0D9488]/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#1e88e5]/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Header */}
@@ -26,7 +26,7 @@ export default function TargetAudience() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#F97316]/10 text-[#F97316] text-sm font-semibold mb-4">
             PARA QUEM É
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#115E59] leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
             Este Método é <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FBBF24]">Perfeito</span><br />Para Você Que:
           </h2>
         </div>
@@ -36,7 +36,7 @@ export default function TargetAudience() {
           {audiences.map((item, index) => (
             <div 
               key={index} 
-              className="group flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#0D9488]/30 hover:shadow-xl transition-all duration-300"
+              className="group flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#1e88e5]/30 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#F97316] to-[#FBBF24] rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform">
                 <i className={`${item.icon} text-xl text-white`}></i>
@@ -49,7 +49,7 @@ export default function TargetAudience() {
         </div>
 
         {/* CTA Banner */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#115E59] to-[#0D9488] p-10 md:p-12 text-center">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0c5a9e] to-[#1e88e5] p-10 md:p-12 text-center">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F97316]/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
           
@@ -61,7 +61,7 @@ export default function TargetAudience() {
               onClick={handleCTA}
               className="group bg-[#F97316] hover:bg-[#EA580C] text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-[#F97316]/30 hover:shadow-[#F97316]/50 hover:scale-105 cursor-pointer whitespace-nowrap inline-flex items-center gap-2"
             >
-              QUERO COMEÇAR AGORA
+              <p className="text-wrap">QUERO COMEÇAR AGORA</p>
               <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
             </button>
           </div>

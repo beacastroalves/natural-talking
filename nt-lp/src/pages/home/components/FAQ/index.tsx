@@ -34,7 +34,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 bg-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0D9488]/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e88e5]/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-4xl mx-auto px-6 relative">
         {/* Header */}
@@ -42,7 +42,7 @@ export default function FAQ() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#F97316]/10 text-[#F97316] text-sm font-semibold mb-4">
             DÚVIDAS FREQUENTES
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#115E59] leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
             Perguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FBBF24]">Frequentes</span>
           </h2>
         </div>
@@ -54,7 +54,7 @@ export default function FAQ() {
               key={index}
               className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 openIndex === index 
-                  ? 'border-[#0D9488]/30 bg-[#0D9488]/5 shadow-lg' 
+                  ? 'border-[#1e88e5]/30 bg-[#1e88e5]/5 shadow-lg' 
                   : 'border-gray-100 bg-white hover:border-gray-200'
               }`}
             >
@@ -62,12 +62,12 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
               >
-                <span className={`font-bold pr-4 ${openIndex === index ? 'text-[#0D9488]' : 'text-[#115E59]'}`}>
+                <span className={`font-bold pr-4 ${openIndex === index ? 'text-[#1e88e5]' : 'text-primary'}`}>
                   {faq.question}
                 </span>
                 <div className={`w-10 h-10 flex items-center justify-center rounded-xl flex-shrink-0 transition-all ${
                   openIndex === index 
-                    ? 'bg-[#0D9488] rotate-180' 
+                    ? 'bg-[#1e88e5] rotate-180' 
                     : 'bg-gray-100'
                 }`}>
                   <i className={`ri-arrow-down-s-line text-xl ${openIndex === index ? 'text-white' : 'text-gray-500'}`}></i>
@@ -92,7 +92,7 @@ export default function FAQ() {
             href="https://wa.me/5585985167789?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20as%20aulas."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#0D9488] font-semibold hover:text-[#115E59] transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 text-[#1e88e5] font-semibold hover:text-primary transition-colors cursor-pointer"
           >
             <i className="ri-whatsapp-line text-xl"></i>
             Fale conosco pelo WhatsApp

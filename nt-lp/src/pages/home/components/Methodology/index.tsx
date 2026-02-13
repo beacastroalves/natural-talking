@@ -5,25 +5,25 @@ export default function Methodology() {
       icon: 'ri-user-settings-line',
       title: 'Planejamento 100% Personalizado',
       description: 'Cada aluno tem objetivos únicos. Criamos um plano sob medida para suas necessidades específicas.',
-      color: 'from-[#F97316] to-[#FBBF24]'
+      color: 'from-[#FBBF24] to-[#F97316]'
     },
     {
       icon: 'ri-speak-line',
       title: 'Speaking First',
       description: 'Nada de meses estudando gramática. Você começa falando desde a primeira aula, como acontece na vida real.',
-      color: 'from-[#0D9488] to-[#14B8A6]'
+      color: 'from-[#FBBF24] to-[#F97316]'
     },
     {
       icon: 'ri-feedback-line',
       title: 'Feedback em Tempo Real',
       description: 'Correções imediatas e construtivas que aceleram seu aprendizado sem quebrar sua confiança.',
-      color: 'from-[#115E59] to-[#0D9488]'
+      color: 'from-[#FBBF24] to-[#F97316]'
     },
     {
       icon: 'ri-team-line',
       title: 'Situações Reais',
       description: 'Simulamos entrevistas, viagens, reuniões e conversas do dia a dia para você estar sempre preparado.',
-      color: 'from-[#F97316] to-[#FB923C]'
+      color: 'from-[#FBBF24] to-[#F97316]'
     }
   ];
 
@@ -43,14 +43,14 @@ export default function Methodology() {
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#0D9488]/10 text-[#0D9488] text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#1e88e5]/10 text-[#1e88e5] text-sm font-semibold mb-4">
             METODOLOGIA
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#115E59] mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6 leading-tight">
             O Método <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FBBF24]">Real Life English</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Uma abordagem revolucionária que coloca você no centro do aprendizado, focando no que realmente importa: <strong className="text-[#115E59]">comunicação real</strong>.
+            Uma abordagem revolucionária que coloca você no centro do aprendizado, focando no que realmente importa: <strong className="text-primary">comunicação real</strong>.
           </p>
         </div>
 
@@ -65,10 +65,10 @@ export default function Methodology() {
               <div className={`absolute inset-0 bg-gradient-to-br ${method.color} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               
               <div className="relative">
-                <div className="w-14 h-14 flex items-center justify-center bg-[#115E59] group-hover:bg-white/20 rounded-2xl mb-5 transition-colors">
+                <div className="w-14 h-14 flex items-center justify-center bg-primary group-hover:bg-white/20 rounded-2xl mb-5 transition-colors">
                   <i className={`${method.icon} text-2xl text-[#F97316] group-hover:text-white transition-colors`}></i>
                 </div>
-                <h3 className="text-lg font-bold text-[#115E59] group-hover:text-white mb-3 transition-colors">
+                <h3 className="text-lg font-bold text-primary group-hover:text-white mb-3 transition-colors">
                   {method.title}
                 </h3>
                 <p className="text-sm text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors">
@@ -81,19 +81,19 @@ export default function Methodology() {
 
         {/* Profiles Grid */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#115E59] text-center mb-8">
+          <h3 className="text-2xl font-bold text-primary text-center mb-8">
             Inglês Personalizado Para Cada Perfil
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {profiles.map((profile, index) => (
               <div 
                 key={index}
-                className="p-5 rounded-2xl bg-gray-50 hover:bg-[#115E59] border border-gray-100 hover:border-[#115E59] group transition-all duration-300 text-center cursor-default"
+                className="p-5 rounded-2xl bg-gray-50 hover:bg-primary border border-gray-100 hover:border-[#0c5a9e] group transition-all duration-300 text-center cursor-default"
               >
                 <div className="w-12 h-12 flex items-center justify-center bg-[#F97316]/10 group-hover:bg-white/20 rounded-xl mx-auto mb-3 transition-colors">
                   <i className={`${profile.icon} text-2xl text-[#F97316] group-hover:text-white transition-colors`}></i>
                 </div>
-                <h4 className="font-bold text-[#115E59] group-hover:text-white text-sm mb-1 transition-colors">{profile.title}</h4>
+                <h4 className="font-bold text-primary group-hover:text-white text-sm mb-1 transition-colors">{profile.title}</h4>
                 <p className="text-xs text-gray-500 group-hover:text-white/70 transition-colors">{profile.desc}</p>
               </div>
             ))}

@@ -31,7 +31,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/2cb8f885ff40b786704879ba0132079f.png" 
+            src="public/img/natural-talking-b.png" 
             alt="Natural Talking English"
             className="h-10 md:h-12 w-auto object-contain"
           />
@@ -50,7 +50,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               onClick={() => scrollToSection(item.id)} 
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer whitespace-nowrap ${
                 isScrolled 
-                  ? 'text-[#115E59] hover:bg-[#115E59]/10' 
+                  ? 'text-primary hover:bg-[#115E59]/10' 
                   : 'text-white/90 hover:bg-white/10'
               }`}
             >
@@ -70,7 +70,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`md:hidden w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer ${
-            isScrolled ? 'text-[#115E59]' : 'text-white'
+            isScrolled ? 'text-primary' : 'text-white'
           }`}
         >
           <i className={`${mobileMenuOpen ? 'ri-close-line' : 'ri-menu-line'} text-2xl`}></i>
@@ -90,7 +90,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               <button 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)} 
-                className="w-full text-left px-4 py-3 rounded-xl text-[#115E59] font-medium hover:bg-[#115E59]/10 transition-all cursor-pointer"
+                className="w-full text-left px-4 py-3 rounded-xl text-primary font-medium hover:bg-[#115E59]/10 transition-all cursor-pointer"
               >
                 {item.label}
               </button>
