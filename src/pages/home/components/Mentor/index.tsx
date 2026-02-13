@@ -41,7 +41,7 @@ export default function Mentor() {
                 <div className="relative text-center">
                   <div className="w-full h-auto mx-auto mb-6 rounded-3xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20">
                     <img 
-                      src="public/img/johnata-chile.jpeg" 
+                      src="img/johnata-chile.jpeg" 
                       alt="Johnata Florencio" 
                       className="w-full h-full object-cover"
                     />

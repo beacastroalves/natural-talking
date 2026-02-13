@@ -31,7 +31,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="public/img/natural-talking-b.png" 
+            src="img/natural-talking-b.png" 
             alt="Natural Talking English"
             className="h-10 md:h-12 w-auto object-contain"
           />
