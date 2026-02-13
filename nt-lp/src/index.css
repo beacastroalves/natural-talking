@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* No Tailwind v4, usamos CSS padrão sempre que possível */
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0; /* Use CSS puro aqui, é mais seguro e rápido */
+    min-height: 100vh;
+  }
+}
+
+.text-primary {
+  color: red;
+  /* #115E59 */
+}
