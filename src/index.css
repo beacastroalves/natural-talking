@@ -12,9 +12,11 @@
 
 .text-primary {
   color: #0e5e8d;
+  /* color: #38b6ff; */
   /* color: #ff7c38; */
 }
 
 .bg-primary {
-  background-color: #38b6ff;
+  background-color: #0e5e8d;
+  /* background-color: #38b6ff; */
 }
