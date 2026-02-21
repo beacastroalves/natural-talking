@@ -26,12 +26,12 @@ export default function ProblemSolution() {
   ];
 
   const header = useScrollReveal<HTMLDivElement>();
-  const painCol = useScrollReveal<HTMLDivElement>({ delay: 100 });
-  const solCol = useScrollReveal<HTMLDivElement>({ delay: 200 });
-  const painItems = useStaggerReveal(pains.length, 200, 100);
-  const solItems = useStaggerReveal(solutions.length, 300, 100);
-  const ctaText = useScrollReveal<HTMLParagraphElement>({ delay: 100 });
-  const ctaBtn = useScrollReveal<HTMLButtonElement>({ delay: 250 });
+  const painCol = useScrollReveal<HTMLDivElement>({ delay: 50 });
+  const solCol = useScrollReveal<HTMLDivElement>({ delay: 100 });
+  const painItems = useStaggerReveal(pains.length, 100, 50);
+  const solItems = useStaggerReveal(solutions.length, 150, 50);
+  const ctaText = useScrollReveal<HTMLParagraphElement>({ delay: 50 });
+  const ctaBtn = useScrollReveal<HTMLButtonElement>({ delay: 125 });
 
   return (
     <section className="py-24 bg-gradient-to-b from-[#FDFDFD] to-[#F8FAFB] relative overflow-hidden">
@@ -45,11 +45,11 @@ export default function ProblemSolution() {
           <span className={`inline-block px-4 py-1.5 rounded-full bg-[#38b6ff]/10 text-[#38b6ff] text-sm font-semibold mb-4 ${revealClass(header.isVisible, 'up')}`}>
             A SOLUÇÃO
           </span>
-          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] mb-6 leading-tight ${revealClass(header.isVisible, 'up')} delay-100`}>
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] mb-6 leading-tight ${revealClass(header.isVisible, 'up')} delay-50`}>
             Você Já Tentou Aprender<br />
             <span className="text-[#38b6ff]">e Não Conseguiu?</span>
           </h2>
-          <p className={`text-lg text-[#051218]/70 max-w-2xl mx-auto ${revealClass(header.isVisible, 'up')} delay-200`}>
+          <p className={`text-lg text-[#051218]/70 max-w-2xl mx-auto ${revealClass(header.isVisible, 'up')} delay-100`}>
             O problema não é você — é o método tradicional que simplesmente não funciona.
           </p>
         </div>

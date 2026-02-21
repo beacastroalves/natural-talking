@@ -44,7 +44,7 @@ export default function FinalCTA() {
             <span className={`inline-block px-4 py-1.5 rounded-full bg-[#FDFDFD]/15 backdrop-blur-sm text-[#FDFDFD] text-sm font-semibold mb-6 ${revealClass(header.isVisible, 'up')}`}>
               🎯 ÚLTIMA CHAMADA
             </span>
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#FDFDFD] mb-6 leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '100ms' }}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#FDFDFD] mb-6 leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '50ms' }}>
               Pare de Adiar.<br />
               <span className="text-[#051218]">O Mundo Não Espera.</span>
             </h2>

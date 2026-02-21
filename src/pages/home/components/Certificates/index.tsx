@@ -159,7 +159,7 @@ export default function Certificates() {
           <span className={`inline-block px-4 py-1.5 rounded-full bg-[#38b6ff]/10 text-[#38b6ff] text-sm font-semibold mb-4 ${revealClass(header.isVisible, 'up')}`}>
             CERTIFICAÇÃO
           </span>
-          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] mb-6 leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '100ms' }}>
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] mb-6 leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '50ms' }}>
             Seu <span className="text-[#38b6ff]">Certificado de Fluência</span>
           </h2>
           <p className={`text-lg text-[#051218]/70 max-w-2xl mx-auto mb-8 ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '200ms' }}>

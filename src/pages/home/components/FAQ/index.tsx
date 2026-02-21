@@ -67,7 +67,7 @@ export default function FAQ() {
           <span className={`inline-block px-4 py-1.5 rounded-full bg-[#38b6ff]/10 text-[#38b6ff] text-sm font-semibold mb-4 ${revealClass(header.isVisible, 'up')}`}>
             DÚVIDAS FREQUENTES
           </span>
-          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '100ms' }}>
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] leading-tight ${revealClass(header.isVisible, 'up')}`} style={{ transitionDelay: '50ms' }}>
             Perguntas <span className="text-[#38b6ff]">Frequentes</span>
           </h2>
         </div>
