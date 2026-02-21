@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 interface NavbarProps {
@@ -17,7 +16,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
   };
 
   const handleCTA = () => {
-    const phone = '5585985167789';
+    const phone = '5585986691884';
     const message = encodeURIComponent('Olá! Quero agendar minha aula experimental GRATUITA! 🚀');
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
@@ -25,13 +24,13 @@ export default function Navbar({ isScrolled }: NavbarProps) {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
-        ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-black/5'
+        ? 'bg-[#FDFDFD]/90 backdrop-blur-xl shadow-lg shadow-[#38b6ff]/5'
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="img/natural-talking-b.png" 
+            src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/bddfde016c58c5734a207a621a620d67.png"
             alt="Natural Talking English"
             className="h-10 md:h-12 w-auto object-contain"
           />
@@ -45,32 +44,32 @@ export default function Navbar({ isScrolled }: NavbarProps) {
             { label: 'Planos', id: 'planos' },
             { label: 'FAQ', id: 'faq' }
           ].map((item) => (
-            <button 
+            <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)} 
+              onClick={() => scrollToSection(item.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer whitespace-nowrap ${
-                isScrolled 
-                  ? 'text-primary hover:bg-[#115E59]/10' 
-                  : 'text-white/90 hover:bg-white/10'
+                isScrolled
+                  ? 'text-[#051218]/90 hover:bg-[#E5F5FF]'
+                  : 'text-[#051218]/80 hover:bg-[#38b6ff]/10'
               }`}
             >
               {item.label}
             </button>
           ))}
           
-          <button 
+          <button
             onClick={handleCTA}
-            className="ml-4 bg-[#F97316] text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#EA580C] transition-all cursor-pointer whitespace-nowrap shadow-lg shadow-[#F97316]/25 hover:shadow-[#F97316]/40 hover:scale-105"
+            className="ml-4 bg-[#38b6ff] text-[#FDFDFD] px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#2A8FCC] transition-all cursor-pointer whitespace-nowrap shadow-lg shadow-[#38b6ff]/20 hover:shadow-[#38b6ff]/30 hover:scale-105"
           >
             Aula Grátis
           </button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`md:hidden w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer ${
-            isScrolled ? 'text-primary' : 'text-white'
+            isScrolled ? 'text-[#051218]' : 'text-[#051218]/80'
           }`}
         >
           <i className={`${mobileMenuOpen ? 'ri-close-line' : 'ri-menu-line'} text-2xl`}></i>
@@ -79,7 +78,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-xl">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#FDFDFD]/95 backdrop-blur-xl border-t border-[#E5F5FF] shadow-xl">
           <div className="p-4 space-y-2">
             {[
               { label: 'Metodologia', id: 'metodologia' },
@@ -87,17 +86,17 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               { label: 'Planos', id: 'planos' },
               { label: 'FAQ', id: 'faq' }
             ].map((item) => (
-              <button 
+              <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)} 
-                className="w-full text-left px-4 py-3 rounded-xl text-primary font-medium hover:bg-[#115E59]/10 transition-all cursor-pointer"
+                onClick={() => scrollToSection(item.id)}
+                className="w-full text-left px-4 py-3 rounded-xl text-[#051218]/90 font-medium hover:bg-[#E5F5FF] transition-all cursor-pointer"
               >
                 {item.label}
               </button>
             ))}
-            <button 
+            <button
               onClick={handleCTA}
-              className="w-full bg-[#F97316] text-white px-4 py-3 rounded-xl font-bold hover:bg-[#EA580C] transition-all cursor-pointer mt-4"
+              className="w-full bg-[#38b6ff] text-[#FDFDFD] px-4 py-3 rounded-xl font-bold hover:bg-[#2A8FCC] transition-all cursor-pointer mt-4"
             >
               Agendar Aula Grátis
             </button>

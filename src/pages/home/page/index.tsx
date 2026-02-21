@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import ProblemSolution from '../components/ProblemSolution';
@@ -5,6 +6,7 @@ import Mentor from '../components/Mentor';
 import Methodology from '../components/Methodology';
 import TargetAudience from '../components/TargetAudience';
 import Pricing from '../components/Pricing';
+import Certificates from '../components/Certificates';
 import Transformation from '../components/Transformation';
 import FAQ from '../components/FAQ';
 import FinalCTA from '../components/FinalCTA';
@@ -31,6 +33,7 @@ export default function Home() {
       <Methodology />
       <TargetAudience />
       <Pricing />
+      <Certificates />
       <Transformation />
       <FAQ />
       <FinalCTA />

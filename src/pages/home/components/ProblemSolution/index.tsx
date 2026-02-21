@@ -1,9 +1,12 @@
 
+import { useScrollReveal, useStaggerReveal, revealClass, staggerItemClass } from '../../../../hooks/useScrollReveal';
+
 export default function ProblemSolution() {
   const handleCTA = () => {
-    const phone = '5585985167789';
-    const message = encodeURIComponent('Olá! Quero agendar minha aula experimental GRATUITA! 🚀');
-    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    const section = document.getElementById('planos');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const pains = [
@@ -16,29 +19,37 @@ export default function ProblemSolution() {
 
   const solutions = [
     { icon: 'ri-chat-voice-line', text: 'Foco em conversação desde o dia 1' },
-    { icon: 'ri-calendar-check-line', text: 'Horários 100% flexíveis' },
-    { icon: 'ri-user-star-line', text: 'Atenção personalizada (máx 3-4 alunos)' },
+    { icon: 'ri-calendar-check-line', text: 'Horários 100% flexíveis que se adapta a sua rotina' },
+    { icon: 'ri-user-star-line', text: 'Atenção personalizada INDIVIDUAL/ DUPLA / GRUPO' },
     { icon: 'ri-shield-star-line', text: 'Ambiente seguro, sem julgamentos' },
     { icon: 'ri-global-line', text: 'Situações reais: viagens, reuniões, entrevistas' }
   ];
 
+  const header = useScrollReveal<HTMLDivElement>();
+  const painCol = useScrollReveal<HTMLDivElement>({ delay: 100 });
+  const solCol = useScrollReveal<HTMLDivElement>({ delay: 200 });
+  const painItems = useStaggerReveal(pains.length, 200, 100);
+  const solItems = useStaggerReveal(solutions.length, 300, 100);
+  const ctaText = useScrollReveal<HTMLParagraphElement>({ delay: 100 });
+  const ctaBtn = useScrollReveal<HTMLButtonElement>({ delay: 250 });
+
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#FDFDFD] to-[#F8FAFB] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#1e88e5]/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F97316]/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#38b6ff]/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1 left-0 w-80 h-80 bg-[#70CFFF]/10 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#F97316]/10 text-[#F97316] text-sm font-semibold mb-4">
-            O PROBLEMA
+        <div ref={header.ref} className="text-center mb-16">
+          <span className={`inline-block px-4 py-1.5 rounded-full bg-[#38b6ff]/10 text-[#38b6ff] text-sm font-semibold mb-4 ${revealClass(header.isVisible, 'up')}`}>
+            A SOLUÇÃO
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6 leading-tight">
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-[#051218] mb-6 leading-tight ${revealClass(header.isVisible, 'up')} delay-100`}>
             Você Já Tentou Aprender<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FBBF24]">e Não Conseguiu?</span>
+            <span className="text-[#38b6ff]">e Não Conseguiu?</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className={`text-lg text-[#051218]/70 max-w-2xl mx-auto ${revealClass(header.isVisible, 'up')} delay-200`}>
             O problema não é você — é o método tradicional que simplesmente não funciona.
           </p>
         </div>
@@ -46,61 +57,65 @@ export default function ProblemSolution() {
         {/* Comparison Grid */}
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Pain Column */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-500/10 rounded-3xl"></div>
-            <div className="relative p-8 md:p-10 rounded-3xl border border-red-200/50 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 flex items-center justify-center bg-red-500/10 rounded-2xl">
-                  <i className="ri-close-circle-line text-2xl text-red-500"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800">Métodos Tradicionais</h3>
-                  <p className="text-sm text-gray-500">O que não funciona</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                {pains.map((pain, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-center gap-4 p-4 rounded-2xl bg-white/80 border border-red-100 hover:border-red-200 transition-all"
-                  >
-                    <div className="w-10 h-10 flex items-center justify-center bg-red-500/10 rounded-xl flex-shrink-0">
-                      <i className={`${pain.icon} text-xl text-red-500`}></i>
-                    </div>
-                    <span className="text-gray-700 font-medium">{pain.text}</span>
+          <div ref={painCol.ref} className={revealClass(painCol.isVisible, 'right')}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-500/10 rounded-3xl"></div>
+              <div className="relative p-8 md:p-10 rounded-3xl border border-red-200/50 backdrop-blur-sm bg-[#FDFDFD]/80">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 flex items-center justify-center bg-red-500/10 rounded-2xl">
+                    <i className="ri-close-circle-line text-2xl text-red-500"></i>
                   </div>
-                ))}
+                  <div>
+                    <h3 className="text-xl font-bold text-[#051218]">Métodos Tradicionais</h3>
+                    <p className="text-sm text-[#051218]/60">O que não funciona</p>
+                  </div>
+                </div>
+
+                <div ref={painItems.containerRef} className="space-y-4">
+                  {pains.map((pain, index) => (
+                    <div
+                      key={index}
+                      className={`flex items-center gap-4 p-4 rounded-2xl bg-[#FDFDFD] border border-red-100 hover:border-red-200 transition-all ${staggerItemClass(painItems.visibleItems[index], 'up')}`}
+                    >
+                      <div className="w-10 h-10 flex items-center justify-center bg-red-500/10 rounded-xl flex-shrink-0">
+                        <i className={`${pain.icon} text-xl text-red-500`}></i>
+                      </div>
+                      <span className="text-[#051218]/85 font-medium">{pain.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Solution Column */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1e88e5]/5 to-[#1e88e5]/15 rounded-3xl"></div>
-            <div className="relative p-8 md:p-10 rounded-3xl border-2 border-[#1e88e5]/30 backdrop-blur-sm shadow-xl shadow-[#1e88e5]/10">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 flex items-center justify-center bg-[#1e88e5] rounded-2xl">
-                  <i className="ri-check-double-line text-2xl text-white"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-primary">Natural Talking English</h3>
-                  <p className="text-sm text-[#1e88e5]">O método que funciona</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                {solutions.map((solution, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-center gap-4 p-4 rounded-2xl bg-white/90 border border-[#1e88e5]/20 hover:border-[#1e88e5]/40 hover:shadow-lg transition-all"
-                  >
-                    <div className="w-10 h-10 flex items-center justify-center bg-[#1e88e5] rounded-xl flex-shrink-0">
-                      <i className={`${solution.icon} text-xl text-white`}></i>
-                    </div>
-                    <span className="text-primary font-medium">{solution.text}</span>
+          <div ref={solCol.ref} className={revealClass(solCol.isVisible, 'left')}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#38b6ff]/5 to-[#38b6ff]/15 rounded-3xl"></div>
+              <div className="relative p-8 md:p-10 rounded-3xl border-2 border-[#38b6ff]/30 backdrop-blur-sm shadow-xl shadow-[#38b6ff]/10 bg-[#FDFDFD]">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 flex items-center justify-center bg-[#38b6ff] rounded-2xl">
+                    <i className="ri-check-double-line text-2xl text-[#FDFDFD]"></i>
                   </div>
-                ))}
+                  <div>
+                    <h3 className="text-xl font-bold text-[#051218]">Natural Talking English</h3>
+                    <p className="text-sm text-[#38b6ff]">O método que funciona</p>
+                  </div>
+                </div>
+
+                <div ref={solItems.containerRef} className="space-y-4">
+                  {solutions.map((solution, index) => (
+                    <div
+                      key={index}
+                      className={`flex items-center gap-4 p-4 rounded-2xl bg-[#FDFDFD] border border-[#38b6ff]/20 hover:border-[#38b6ff]/40 hover:shadow-lg transition-all ${staggerItemClass(solItems.visibleItems[index], 'up')}`}
+                    >
+                      <div className="w-10 h-10 flex items-center justify-center bg-[#38b6ff] rounded-xl flex-shrink-0">
+                        <i className={`${solution.icon} text-xl text-[#FDFDFD]`}></i>
+                      </div>
+                      <span className="text-[#051218]/90 font-medium">{solution.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -108,14 +123,15 @@ export default function ProblemSolution() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <p className="text-xl font-bold text-primary mb-6">
-            A diferença está no método. <span className="text-[#F97316]">E o método funciona.</span>
+          <p ref={ctaText.ref} className={`text-xl font-bold text-[#051218] mb-6 ${revealClass(ctaText.isVisible, 'up')}`}>
+            A diferença está no método. <span className="text-[#38b6ff]">E o método funciona.</span>
           </p>
-          <button 
+          <button
+            ref={ctaBtn.ref}
             onClick={handleCTA}
-            className="group bg-[#F97316] text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-[#EA580C] transition-all shadow-lg shadow-[#F97316]/30 hover:shadow-[#F97316]/50 hover:scale-105 cursor-pointer whitespace-nowrap inline-flex items-center gap-2"
+            className={`group bg-[#38b6ff] text-[#FDFDFD] px-10 py-4 rounded-2xl text-lg font-bold hover:bg-[#2A8FCC] transition-all shadow-lg shadow-[#38b6ff]/30 hover:shadow-[#38b6ff]/50 hover:scale-105 cursor-pointer whitespace-nowrap inline-flex items-center gap-2 ${revealClass(ctaBtn.isVisible, 'scale')}`}
           >
-            <p className="text-wrap">QUERO EXPERIMENTAR AGORA</p>
+            QUERO EXPERIMENTAR AGORA
             <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
           </button>
         </div>
