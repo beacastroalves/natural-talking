@@ -126,7 +126,7 @@ export default function FinalCTA() {
             {/* Logo & Slogan */}
             <div className="md:col-span-2">
               <img
-                src="public/img/natural-talking-w.png"
+                src="src/assets/img/natural-talking-w.png"
                 alt="Natural Talking English"
                 className="h-12 md:h-14 w-auto object-contain mb-6"
               />
