@@ -3,7 +3,7 @@ import { useScrollReveal, useStaggerReveal, revealClass, staggerItemClass } from
 
 export default function FinalCTA() {
   const handleWhatsApp = () => {
-    const phone = '5585986691884';
+    const phone = '5585985167789';
     const message = encodeURIComponent('Olá! Quero agendar minha aula experimental GRATUITA! 🚀');
     try {
       const newWindow = window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
@@ -96,14 +96,14 @@ export default function FinalCTA() {
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-2 p-3 rounded-xl bg-[#E5F5FF]">
                       <i className={`${item.icon} text-[#38b6ff]`}></i>
-                      <span className="text-sm text-[#051218]/80">{item.text}</span>
+                      <span className="text-sm text-[#051218]/80 text-left">{item.text}</span>
                     </div>
                   ))}
                 </div>
 
                 <button
                   onClick={handleWhatsApp}
-                  className="w-full bg-[#38b6ff] text-[#FDFDFD] py-5 rounded-2xl font-bold text-lg hover:bg-[#2A8FCC] transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-3 shadow-lg shadow-[#38b6ff]/30 hover:shadow-[#38b6ff]/50 hover:scale-[1.02]"
+                  className="w-full bg-[#38b6ff] text-[#FDFDFD] p-5 rounded-2xl font-bold text-lg hover:bg-[#2A8FCC] transition-all cursor-pointer text-wrap flex items-center justify-center gap-3 shadow-lg shadow-[#38b6ff]/30 hover:shadow-[#38b6ff]/50 hover:scale-[1.02]"
                 >
                   <i className="ri-whatsapp-line text-2xl"></i>
                   AGENDAR MINHA AULA GRÁTIS
@@ -126,7 +126,7 @@ export default function FinalCTA() {
             {/* Logo & Slogan */}
             <div className="md:col-span-2">
               <img
-                src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/bddfde016c58c5734a207a621a620d67.png"
+                src="public/img/natural-talking-w.png"
                 alt="Natural Talking English"
                 className="h-12 md:h-14 w-auto object-contain mb-6"
               />
@@ -142,16 +142,12 @@ export default function FinalCTA() {
             <div>
               <h4 className="text-[#FDFDFD] font-bold mb-4">Contato</h4>
               <div className="space-y-3">
-                <a href="https://wa.me/5585986691884" className="flex items-center gap-3 text-[#FDFDFD]/70 hover:text-[#38b6ff] transition-colors cursor-pointer">
-                  <i className="ri-whatsapp-line"></i>
-                  <span className="text-sm">(85) 98669-1884</span>
-                </a>
-                <a href="https://wa.me/5585997988007" className="flex items-center gap-3 text-[#FDFDFD]/70 hover:text-[#38b6ff] transition-colors cursor-pointer">
-                  <i className="ri-whatsapp-line"></i>
-                  <span className="text-sm">(85) 99798-8007</span>
+                <a href="https://wa.me/5585985167789" target="_blank" className="flex items-center gap-3 text-[#FDFDFD]/70 hover:text-[#38b6ff] transition-colors cursor-pointer">
+                  <i className="ri-whatsapp-line translate-y-0.5"></i>
+                  <span className="text-sm">(85) 98516-7789</span>
                 </a>
                 <a href="mailto:naturaltalkingenglish@gmail.com" className="flex items-center gap-3 text-[#FDFDFD]/70 hover:text-[#38b6ff] transition-colors cursor-pointer">
-                  <i className="ri-mail-line"></i>
+                  <i className="ri-mail-line translate-y-0.5"></i>
                   <span className="text-sm">naturaltalkingenglish@gmail.com</span>
                 </a>
               </div>
@@ -160,9 +156,9 @@ export default function FinalCTA() {
             {/* Location */}
             <div>
               <h4 className="text-[#FDFDFD] font-bold mb-4">Localização</h4>
-              <div className="flex items-start gap-3 text-[#FDFDFD]/70">
-                <i className="ri-map-pin-line mt-0.5"></i>
-                <span className="text-sm">Itaitinga/CE<br />Brasil</span>
+              <div className="flex items-center gap-3 text-[#FDFDFD]/70">
+                <i className="ri-computer-line mt-0.5"></i>
+                <span className="text-sm">100% Remoto | Online</span>
               </div>
             </div>
           </div>
@@ -170,15 +166,15 @@ export default function FinalCTA() {
           {/* Bottom */}
           <div className="pt-8 border-t border-[#FDFDFD]/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[#FDFDFD]/60 text-sm">
-              © 2024 Natural Talking English. Todos os direitos reservados.
+              © 2026 Natural Talking English. Todos os direitos reservados.
             </p>
             <a
-              href="https://readdy.ai/?ref=logo"
+              href="https://wa.me/5585996611157?text=Ol%C3%A1!%20Quero%20fazer%20um%20site."
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#FDFDFD]/50 text-xs hover:text-[#38b6ff] transition-colors cursor-pointer"
             >
-              Powered by Readdy
+              Websites by BeaCastroDEV
             </a>
           </div>
         </div>

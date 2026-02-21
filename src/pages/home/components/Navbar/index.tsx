@@ -16,7 +16,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
   };
 
   const handleCTA = () => {
-    const phone = '5585986691884';
+    const phone = '5585985167789';
     const message = encodeURIComponent('Olá! Quero agendar minha aula experimental GRATUITA! 🚀');
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
@@ -30,7 +30,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/bddfde016c58c5734a207a621a620d67.png"
+            src="public/img/natural-talking-b.png"
             alt="Natural Talking English"
             className="h-10 md:h-12 w-auto object-contain"
           />
@@ -47,7 +47,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer whitespace-nowrap ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer text-wrap ${
                 isScrolled
                   ? 'text-[#051218]/90 hover:bg-[#E5F5FF]'
                   : 'text-[#051218]/80 hover:bg-[#38b6ff]/10'

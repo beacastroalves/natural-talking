@@ -114,7 +114,7 @@ export default function Methodology() {
 
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 flex items-center justify-center bg-[#FDFDFD]/20 backdrop-blur-sm rounded-2xl">
+              <div className="w-16 h-16 flex items-center justify-center p-4 bg-[#FDFDFD]/20 backdrop-blur-sm rounded-2xl">
                 <i className="ri-gift-line text-4xl text-[#FDFDFD]"></i>
               </div>
               <div>

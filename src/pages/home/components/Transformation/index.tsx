@@ -74,7 +74,7 @@ export default function Transformation() {
           </p>
           <button
             onClick={scrollToPlanos}
-            className="group bg-[#38b6ff] text-[#FDFDFD] px-10 py-4 rounded-2xl text-lg font-bold hover:bg-[#2A8FCC] transition-all shadow-lg shadow-[#38b6ff]/30 hover:shadow-[#38b6ff]/50 hover:scale-105 cursor-pointer whitespace-nowrap inline-flex items-center gap-2"
+            className="group bg-[#38b6ff] text-[#FDFDFD] px-10 py-4 rounded-2xl text-lg font-bold hover:bg-[#2A8FCC] transition-all shadow-lg shadow-[#38b6ff]/30 hover:shadow-[#38b6ff]/50 hover:scale-105 cursor-pointer text-wrap inline-flex items-center gap-2"
           >
             VER PLANOS E COMEÇAR
             <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>

@@ -88,7 +88,7 @@ export default function TargetAudience() {
             </p>
             <button
               onClick={handleCTA}
-              className="group bg-[#051218] hover:bg-[#051218]/90 text-[#FDFDFD] px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-[#051218]/30 hover:shadow-[#051218]/50 hover:scale-105 cursor-pointer whitespace-nowrap inline-flex items-center gap-2"
+              className="group bg-[#051218] hover:bg-[#051218]/90 text-[#FDFDFD] px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-[#051218]/30 hover:shadow-[#051218]/50 hover:scale-105 cursor-pointer text-wrap inline-flex items-center gap-2"
             >
               QUERO COMEÇAR AGORA
               <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>

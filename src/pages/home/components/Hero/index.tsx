@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
   const [spots, setSpots] = useState(47);
@@ -46,12 +46,12 @@ export default function Hero() {
           backgroundSize: '60px 60px'
         }}></div>
 
-        <div className="absolute top-20 left-[10%] w-32 h-32 border-2 border-[#38b6ff]/20 rounded-2xl rotate-12 backdrop-blur-sm"></div>
-        <div className="absolute bottom-32 right-[15%] w-32 h-32 border-2 border-[#70CFFF]/30 rounded-full backdrop-blur-sm"></div>
+        <div className="absolute top-20 left-[10%] w-32 h-32 border-4 border-[#38b6ff]/30 rounded-2xl rotate-12 backdrop-blur-sm"></div>
+        <div className="absolute bottom-20 right-[15%] w-32 h-32 border-4 border-[#38b6ff]/30 rounded-full backdrop-blur-sm"></div>
         <div className="absolute top-1/3 right-[8%] w-4 h-64 bg-gradient-to-b from-[#38b6ff]/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-24">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-0">
         {/* Headline principal */}
         <div className="text-center mb-10">
           <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black text-[#051218] mb-6 leading-[0.95] tracking-tight transition-all duration-1000 ease-out ${headlineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -65,9 +65,9 @@ export default function Hero() {
 
         {/* CTA */}
         <div className="flex flex-col items-center gap-4">
-          <button 
+          <button
             onClick={handleCTA}
-            className={`group bg-[#38b6ff] text-[#FDFDFD] px-10 py-5 rounded-2xl text-lg md:text-xl font-bold transition-all cursor-pointer whitespace-nowrap shadow-2xl shadow-[#38b6ff]/30 flex items-center gap-3 hover:bg-[#2A8FCC] hover:scale-105 hover:shadow-[#38b6ff]/50 ${ctaVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'} duration-700 ease-out`}
+            className={`group bg-[#38b6ff] text-[#FDFDFD] px-10 py-5 rounded-2xl text-lg md:text-xl font-bold transition-all cursor-pointer text-wrap shadow-2xl shadow-[#38b6ff]/30 flex items-center gap-3 hover:bg-[#2A8FCC] hover:scale-105 hover:shadow-[#38b6ff]/50 ${ctaVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'} duration-700 ease-out`}
           >
             QUERO MINHA AULA EXPERIMENTAL GRÁTIS
             <i className="ri-arrow-right-line text-2xl group-hover:translate-x-1 transition-transform"></i>

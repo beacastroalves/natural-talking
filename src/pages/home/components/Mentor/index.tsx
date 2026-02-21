@@ -68,7 +68,7 @@ export default function Mentor() {
                 <div className="relative text-center">
                   <div className="w-full h-auto mx-auto mb-6 rounded-3xl overflow-hidden bg-[#FDFDFD]/10 backdrop-blur-sm border border-[#FDFDFD]/20">
                     <img
-                      src="https://static.readdy.ai/image/65f5237f9454b6e35af1d4e1f673fa2b/3b022d9c45e0764f50742d7572ced642.jpeg"
+                      src="public/img/johnata-chile.jpeg"
                       alt="Johnata Florencio"
                       className="w-full h-full object-cover"
                     />
@@ -143,7 +143,7 @@ export default function Mentor() {
           </div>
           <blockquote className="relative text-[#FDFDFD] text-lg md:text-2xl lg:text-3xl leading-relaxed italic text-center max-w-4xl mx-auto">
             Meu propósito não é te fazer passar em prova. É te ensinar com leveza e te dar {' '}
-            <strong className="text-[#051218] not-italic">LIBERDADE</strong> para se comunicar
+            <strong className="text-[#051218] not-italic px-1">LIBERDADE</strong> para se comunicar
             com qualquer pessoa, em qualquer lugar do mundo de forma natural, sem medo e sem barreiras.
           </blockquote>
           <footer className="mt-6 text-[#051218] font-semibold not-italic text-center text-lg">

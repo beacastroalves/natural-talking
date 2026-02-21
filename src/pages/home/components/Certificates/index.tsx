@@ -172,7 +172,7 @@ export default function Certificates() {
               <button
                 key={level.key}
                 onClick={() => setActiveLevel(level.key)}
-                className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer text-wrap ${
                   activeLevel === level.key
                     ? 'bg-[#38b6ff] text-[#FDFDFD] shadow-lg'
                     : 'text-[#051218]/70 hover:text-[#38b6ff]'

@@ -114,7 +114,7 @@ export default function FAQ() {
         <div ref={ctaBottom.ref} className={`mt-12 text-center ${revealClass(ctaBottom.isVisible, 'up')}`}>
           <p className="text-[#051218]/70 mb-4">Ainda tem dúvidas?</p>
           <a 
-            href="https://wa.me/5585986691884?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20as%20aulas."
+            href="https://wa.me/5585985167789?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20as%20aulas."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[#38b6ff] font-semibold hover:text-[#2A8FCC] transition-colors cursor-pointer"
